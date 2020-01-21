@@ -6,13 +6,20 @@
 
 // alert('funziona?')
 
-// Devo fare in modo che un alert crei 5 numeri casuali. Per fare ciò creo la funzione e utilizzo getRandomNumber
-
+// 1.Devo fare in modo che un alert crei 5 numeri casuali. Per fare ciò creo la funzione e utilizzo getRandomNumber.
 var numeriAlert = [];
+var partenzaContoInverso = 30;
+var contoInverso = setInterval(contoContrario, 1000);
+
+
 for (var i = 0; i < 5; i++) {
   numeriAlert.push(getRandomNumber(1, 100))
 }
 alert(numeriAlert);
+
+// 2.Devo far partire un timer di 30 secondi e per fare ciò creo una funzione specifica per il conto alla rovescia. LA funzione si trova nella parte funzioni;
+
+
 
 
 // FUNZIONI
@@ -21,4 +28,14 @@ function getRandomNumber(numMin, numMax) {
   numMax = Math.floor(numMax);
   var risultato = Math.floor(Math.random() * (numMax - numMin + 1)) + numMin;
   return risultato;
+};
+
+function contoContrario () {
+  if (partenzaContoInverso == 0) {
+    clearInterval(contoInverso)
+  }
+  else {
+    partenzaContoInverso--;
+  }
+  console.log('Mancano esattamente:', partenzaContoInverso, 'secondi');
 }
