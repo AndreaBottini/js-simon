@@ -10,6 +10,7 @@
 var numeriAlert = [];
 var partenzaContoInverso = 30;
 var contoInverso = setInterval(contoContrario, 1000);
+var numeriUtente = [];
 
 
 for (var i = 0; i < 5; i++) {
@@ -19,7 +20,13 @@ alert(numeriAlert);
 
 // 2.Devo far partire un timer di 30 secondi e per fare ciò creo una funzione specifica per il conto alla rovescia. LA funzione si trova nella parte funzioni;
 
+// 3.Devo permettere all'utente di inserire attraverso i prompt i 5 numeri visti in precedenza.
 
+setTimeout(function (contoInverso) {
+  for (var i = 0; i < 5; i++) {
+    var numeriUtente = parseInt(prompt('Inserisci i numeri che hai visto in precedenza'));
+  }
+}, 30000);
 
 
 // FUNZIONI
