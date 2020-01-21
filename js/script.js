@@ -9,7 +9,7 @@
 // 1.Devo fare in modo che un alert crei 5 numeri casuali. Per fare ciò creo la funzione e utilizzo getRandomNumber.
 var numeriAlert = [];
 var partenzaContoInverso = 30;
-var contoInverso = setInterval(contoContrario, 1000);
+// var contoInverso = setInterval(contoContrario, 1000);
 var numeriUtente = [];
 var risultato;
 
@@ -23,14 +23,18 @@ alert(numeriAlert);
 
 // 3.Devo permettere all'utente di inserire attraverso i prompt i 5 numeri visti in precedenza.
 
-setTimeout(function (contoInverso) {
+setTimeout(function() {
   for (var i = 0; i < 5; i++) {
-    var numeriUtente = parseInt(prompt('Inserisci i numeri che hai visto in precedenza'));
-    console.log(numeriUtente);
-    if (numeriAlert == numeriUtente) {
-      risultato = alert('Hai vinto il gioco');
+    numeroUtente = parseInt(prompt('Inserisci i numeri che hai visto in precedenza'));
+    console.log(numeroUtente);
+    if (numeriAlert.includes(numeroUtente)) {
+      numeriUtente.push(numeroUtente);
+    }
+    else {
+      alert('hai sbagliato!');
     }
   }
+  alert('Complimenti!!! Hai indovinato tutti i numeri!')
 }, 30000);
 
 
@@ -42,12 +46,12 @@ function getRandomNumber(numMin, numMax) {
   return risultato;
 };
 
-function contoContrario () {
-  if (partenzaContoInverso == 0) {
-    clearInterval(contoInverso)
-  }
-  else {
-    partenzaContoInverso--;
-  }
-  console.log('Mancano esattamente:', partenzaContoInverso, 'secondi');
-}
+// function contoContrario () {
+//   if (partenzaContoInverso == 0) {
+//     clearInterval(contoInverso)
+//   }
+//   else {
+//     partenzaContoInverso--;
+//   }
+//   console.log('Mancano esattamente:', partenzaContoInverso, 'secondi');
+// }
