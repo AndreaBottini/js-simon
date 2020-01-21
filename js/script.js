@@ -31,10 +31,10 @@ setTimeout(function() {
       numeriUtente.push(numeroUtente);
     }
     else {
-      alert('hai sbagliato!');
+      console.log('Hai sbagliato! I numeri che hai individuato sono:' + numeriUtente);
     }
   }
-  alert('Complimenti!!! Hai indovinato tutti i numeri!')
+  console.log('Complimenti!!! Hai indovinato tutti i numeri!');
 }, 30000);
 
 
