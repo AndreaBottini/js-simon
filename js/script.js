@@ -11,6 +11,7 @@ var numeriAlert = [];
 var partenzaContoInverso = 30;
 var contoInverso = setInterval(contoContrario, 1000);
 var numeriUtente = [];
+var risultato;
 
 
 for (var i = 0; i < 5; i++) {
@@ -25,6 +26,10 @@ alert(numeriAlert);
 setTimeout(function (contoInverso) {
   for (var i = 0; i < 5; i++) {
     var numeriUtente = parseInt(prompt('Inserisci i numeri che hai visto in precedenza'));
+    console.log(numeriUtente);
+    if (numeriAlert == numeriUtente) {
+      risultato = alert('Hai vinto il gioco');
+    }
   }
 }, 30000);
 
