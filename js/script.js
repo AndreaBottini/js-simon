@@ -30,12 +30,9 @@ setTimeout(function() {
     if (numeriAlert.includes(numeroUtente)) {
       numeriUtente.push(numeroUtente);
     }
-    else {
-      console.log('Hai sbagliato! I numeri che hai individuato sono:' + numeriUtente);
-    }
   }
-  console.log('Complimenti!!! Hai indovinato tutti i numeri!');
-}, 30000);
+  alert(' Hai indovinato ' + numeriUtente.length + ' numeri!!' + ' ' + 'I numeri indovinati sono: ' + numeriUtente);
+}, 5000);
 
 
 // FUNZIONI
